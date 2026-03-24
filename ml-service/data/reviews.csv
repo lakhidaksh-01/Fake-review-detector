@@ -1,0 +1,391 @@
+text,label
+"This product changed my life! Absolutely incredible! Best purchase ever!!!",1
+"Works as expected. The build quality is decent, though the battery life could be better.",0
+"⭐⭐⭐⭐⭐ AMAZING!!! HIGHLY RECOMMEND! YOU WON'T REGRET IT!",1
+"I've been using this for two weeks now. It's good for the price, but the software feels a bit sluggish sometimes.",0
+"Five stars! Perfect! Exactly what I needed! Fast shipping!",1
+"Meh. It does the job, but I had higher expectations. The packaging was nice, though.",0
+"Unbeatable quality! A must-have for everyone! Simply the best on the market!",1
+"Arrived earlier than expected. Setup was a pain because the instructions were confusing, but once it worked, it’s been reliable.",0
+"WOW! JUST WOW! SUPER FAST AND SO EFFICIENT!",1
+"I bought this for my son. He loves it, but the app crashes occasionally. Customer service was helpful in fixing it.",0
+"Top-notch product! Superior performance! I'm telling all my friends about it!",1
+"It’s alright. Not amazing, not terrible. Feels a bit cheap but hasn't broken yet.",0
+"100% SATISFACTION GUARANTEED! WILL BUY AGAIN!",1
+"Honestly, it's a mixed bag. The design is sleek, but the material attracts fingerprints like crazy. Also, the sound quality is average.",0
+"Excellent value! Cannot find a single flaw! Perfection!",1
+"I wanted to love this, but it’s just too noisy for my liking. If you don’t mind the hum, it’s powerful.",0
+"THE BEST THING EVER INVENTED!!!",1
+"Good product overall. One star off because the charger cable is too short. Otherwise, it works fine.",0
+"HIGH QUALITY! FAST DELIVERY! 5 STARS!",1
+"It’s been three months and it’s starting to show wear. Works fine, but the paint is peeling. Not sure I’d buy again.",0
+"Revolutionary! Game changer! You need this in your life!",1
+"I like the concept, but the execution is lacking. The buttons feel mushy and the UI is unintuitive.",0
+"Superb! Outstanding! Will recommend to everyone I know!",1
+"It works, but it’s overpriced for what it is. I found a similar item for half the price later.",0
+"GREAT PRODUCT! VERY PLEASED!",1
+"The first unit I received was defective, but the replacement works perfectly. Annoying process, but good end result.",0
+"SIMPLY THE BEST. NO COMPETITION.",1
+"I’m neutral on this. It’s functional, but nothing special. The color is slightly off from the picture online.",0
+"FAST SHIPPING! GREAT QUALITY! WILL ORDER AGAIN!",1
+"Great for the first week, then it started glitching. Had to reset it every day. Returning it.",0
+"PERFECT IN EVERY WAY!",1
+"It’s a decent budget option. Don’t expect premium features. The plastic feels a bit flimsy, but it hasn't cracked yet.",0
+"EXCELLENT QUALITY! VERY HAPPY WITH MY PURCHASE!",1
+"I have mixed feelings. It looks nice on the shelf, but the performance is inconsistent. Sometimes it’s fast, sometimes it lags.",0
+"WOULD GIVE 10 STARS IF I COULD!",1
+"Meets expectations. No surprises. The manual could use more detail for advanced settings.",0
+"BEST PURCHASE I EVER MADE ONLINE!",1
+"The idea is great, but the adhesive is weak. It fell off after two days. I had to use my own glue.",0
+"INCREDIBLE! SO HAPPY I FOUND THIS!",1
+"It’s fine for casual use. If you’re a professional, look elsewhere. Decent for the sale price I got.",0
+"HIGHLY RECOMMENDED! A+++ SELLER!",1
+"Received it damaged. The box was crushed. The product itself seems okay but I’m still testing it.",0
+"TOTALLY WORTH IT! EXCEEDED EXPECTATIONS!",1
+"I like the durability, but it’s a bit heavier than I anticipated. Also, the strap is uncomfortable.",0
+"PERFECT PRODUCT! THANK YOU!",1
+"Not bad for the price, but I wish it had better instructions. Took me an hour to figure out assembly.",0
+"SUPER FAST! SUPER STRONG! AMAZING!",1
+"It’s a solid 3-star product. It does what it says, but it’s not revolutionary. Works fine after a firmware update.",0
+"BEST THING EVER! BUY BUY BUY!",1
+"Had to return it twice. Third time’s the charm? The concept is good but quality control is an issue.",0
+"WONDERFUL! SO GLAD I GOT THIS!",1
+"It’s okay. The battery drains faster than advertised. I get about 4 hours instead of 8.",0
+"AMAZING VALUE! CAN'T GO WRONG!",1
+"I love the design, but the software is buggy. It froze on me twice. Hoping for an update soon.",0
+"SIMPLY PERFECT! NO NOTES!",1
+"For the price, it’s acceptable. The material is a bit thin, but it’s comfortable. Time will tell how it holds up.",0
+"GREAT! THANKS!",1
+"I was skeptical, but it actually works pretty well. However, the smell out of the box was very strong.",0
+"EXCEPTIONAL QUALITY! WORTH EVERY PENNY!",1
+"It’s okay. I’ve seen better. The customer support was nice though when I had a question.",0
+"PERFECT! COULDN'T BE HAPPIER!",1
+"Too complicated for what it does. The app requires too many permissions. The hardware is nice though.",0
+"SUPERIOR PRODUCT! HIGHLY RECOMMEND!",1
+"It’s a bit noisy and the interface is clunky, but it’s reliable. Hasn’t failed me yet.",0
+"JUST WHAT I NEEDED! THANK YOU!",1
+"The color is not as vibrant as shown. It’s more dull. Works fine otherwise, just a visual letdown.",0
+"FAST DELIVERY! GREAT ITEM!",1
+"I like it, but my spouse hates it. It’s a matter of preference. Build is sturdy.",0
+"EXCELLENT! 5 STARS!",1
+"It’s decent. The packaging was excessive with plastic. Functionality is standard.",0
+"GREAT PRODUCT! HIGHLY RECOMMENDED! BEST BUY!",1
+"One month in and it’s already acting up. Disappointed because it started so strong.",0
+"PERFECT FOR MY NEEDS!",1
+"It’s a bit overhyped. It does the job but I don’t think it’s worth the premium price tag.",0
+"TOP QUALITY! VERY IMPRESSED!",1
+"Works, but the learning curve is steep. Not for beginners. The advanced features are great though.",0
+"AMAZING! WILL BUY AGAIN!",1
+"It arrived late, but the product is fine. It’s a bit smaller than I thought from the photos.",0
+"SUPERB! EXCELLENT! GREAT!",1
+"It’s functional, but I wouldn’t trust it for heavy use. For light tasks, it’s okay.",0
+"BEST INVESTMENT EVER!",1
+"The battery life is terrible, but it charges fast. So I guess it balances out? Not really.",0
+"WOW! AMAZING PRODUCT!",1
+"I’m on the fence. The performance is good, but the fan noise is annoying. Also, it runs hot.",0
+"PERFECT PURCHASE!",1
+"It’s not bad. I had a small issue with the firmware, but tech support sorted it out quickly.",0
+"HIGHLY RECOMMEND! A++++",1
+"Good value, but the plastic feels cheap. If it lasts a year I’ll be happy.",0
+"EXCELLENT ITEM! THANK YOU!",1
+"I’ve had it for a month. It works, but the app is glitchy. The hardware is solid though.",0
+"BEST QUALITY! FAST SHIPPING!",1
+"It’s a decent product, but the instructions are poorly translated. Took some trial and error.",0
+"SIMPLY THE BEST!",1
+"I’m disappointed. It didn’t live up to the reviews. It feels fragile and the sound is tinny.",0
+"WONDERFUL ITEM! VERY PLEASED!",1
+"It’s okay for the price. I’ve used better, but I’ve also used much worse. Middle of the road.",0
+"GREAT! SUPER FAST!",1
+"The fit is off. It’s supposed to be universal but it’s loose on one side. Quality is otherwise fine.",0
+"FANTASTIC! EXCELLENT!",1
+"I like the idea, but the execution is poor. The adhesive left residue. Not recommended for delicate surfaces.",0
+"ABSOLUTELY PERFECT! I'M IN LOVE WITH THIS PRODUCT!",1
+"I've had this for about a month now. It works fine, but the screws that came with it were the wrong size. Had to use my own.",0
+"UNBELIEVABLE QUALITY! SO HAPPY!",1
+"It's decent. A bit bulky for my taste, but the performance is steady. No major issues yet.",0
+"MUST HAVE! LIFE CHANGING!",1
+"The first one arrived broken, but the replacement process was easy. The product itself is okay for light use.",0
+"GREATEST INVENTION EVER MADE!",1
+"Pros: It looks nice. Cons: The buttons are stiff and the software is slow. It's okay, not great.",0
+"HIGHLY RECOMMENDED! YOU WON'T BE DISAPPOINTED!",1
+"It’s functional but forgettable. I don't regret buying it, but I wouldn't buy it again either.",0
+"SUPERIOR IN EVERY WAY!",1
+"Setup was a nightmare because the QR code doesn't work. After that, it connects fine. Annoying start.",0
+"PERFECT 10/10!",1
+"It’s a bit louder than I expected. Not a dealbreaker, but noticeable. Good value though.",0
+"EXCELLENT QUALITY! FAST SHIPPING! A++",1
+"I wanted to like it more. The build feels solid, but the features are lacking compared to others.",0
+"THE BEST ON THE MARKET! PERIOD!",1
+"Works well enough. The cable is too short, so I had to buy an extension. Minor inconvenience.",0
+"WOW! JUST WOW! 5 STARS!",1
+"It's okay for what it is. I think it's a bit over-engineered. Simple would have been better.",0
+"AMAZING! HIGHLY RECOMMEND! GREAT VALUE!",1
+"Decent product but poor instructions. Took me forever to figure out how to pair it. Works fine now.",0
+"BEST DECISION EVER!",1
+"It feels sturdy, but the weight is awkward. If you have small hands, it might be uncomfortable.",0
+"TRULY REMARKABLE! EXCEEDED ALL EXPECTATIONS!",1
+"It's a mixed bag. The audio quality is great, but the microphone is terrible. Good for listening, bad for calls.",0
+"SUCH A GREAT PRODUCT! THANK YOU!",1
+"It’s cheap for a reason. Does the job, but I doubt it’ll last long. Already showing signs of wear.",0
+"PERFECT IN EVERY DETAIL!",1
+"I like the portability, but the battery doesn’t last as long as claimed. Also, the charger gets hot.",0
+"TOTALLY WORTH IT!",1
+"Not bad. The color is slightly different from the photo, but I don't mind. It's comfortable.",0
+"INCREDIBLE VALUE! SO PLEASED!",1
+"It’s a solid product. The only complaint is the app keeps asking for updates. Otherwise, no issues.",0
+"WONDERFUL! HIGHLY RECOMMEND!",1
+"It’s alright. I had high hopes, but it’s just average. Customer service was responsive though.",0
+"BEST PRODUCT EVER! I'M OBSESSED!",1
+"Takes some getting used to. The controls are not intuitive. Once you learn it, it’s fine. Build quality is good.",0
+"SUPER FAST! SUPER EASY!",1
+"The packaging was nice, but the product itself is mediocre. It works, but it's not special.",0
+"AMAZING! WOULD GIVE 6 STARS!",1
+"It’s a bit overpriced for the features. You're paying for the brand name. Decent, not great.",0
+"EXCELLENT! VERY HAPPY!",1
+"I've had it for a week and it's already scratched. Works fine, but the material is too soft.",0
+"SIMPLY THE BEST! NO COMPETITION!",1
+"It's fine. Nothing to write home about. The buttons feel a bit cheap, but it does what it says.",0
+"PERFECT PURCHASE! HIGHLY RECOMMEND!",1
+"The firmware update bricked it. Had to return. The replacement works, but I'm wary now.",0
+"GREAT PRODUCT! WORKS LIKE A CHARM!",1
+"It's decent for the price. The texture feels weird at first, but you get used to it. Not for everyone.",0
+"BEST BUY! HIGHLY RECOMMEND!",1
+"It’s a bit disappointing for the cost. I expected more premium materials. It's just okay.",0
+"WOW! AMAZING! WILL BUY AGAIN!",1
+"The light is too bright with no dimmer option. Works well otherwise. It's a minor annoyance.",0
+"SUPERB! TOP NOTCH!",1
+"It’s okay. I think the marketing oversold it. It's a standard product with a fancy name.",0
+"EXCELLENT ITEM! FAST DELIVERY!",1
+"One star off because it didn't come with the advertised accessories. The product itself is fine.",0
+"GREAT! JUST WHAT I NEEDED!",1
+"It’s not bad, but it’s not good either. It’s just there. I use it because I have it, not because I love it.",0
+"FANTASTIC! EXCEEDED EXPECTATIONS!",1
+"Assembly was a pain. Holes didn't line up. Had to drill new ones. Once assembled, it's sturdy.",0
+"PERFECT! LOVE IT!",1
+"It’s a good product but the software is intrusive. Requires too many permissions for a simple device.",0
+"AMAZING QUALITY! 5 STARS!",1
+"It works, but it's noisy. The fan runs constantly even when idle. Not ideal for quiet environments.",0
+"BEST PURCHASE I'VE MADE THIS YEAR!",1
+"The battery drains fast when not in use. Performance is good while it's on, though.",0
+"HIGHLY RECOMMEND! A+",1
+"It’s decent. The ergonomics are off. My hand cramps after using it for an hour. Good for short tasks.",0
+"WONDERFUL PRODUCT! THANK YOU!",1
+"I like it, but I wish it came in more colors. It's a solid performer, just visually boring.",0
+"TRULY EXCEPTIONAL!",1
+"It's okay. The instructions were in Chinese only, so I had to guess. Works fine after setup.",0
+"GREAT! SUPER HAPPY!",1
+"It's a bit flimsy. I'm worried it will break if I drop it. For the price, it's acceptable.",0
+"BEST! JUST BUY IT!",1
+"The concept is cool, but the execution is lacking. It feels like a beta product. Needs refinement.",0
+"INCREDIBLE! SO SATISFIED!",1
+"It does what it says, but nothing more. The interface is outdated. Good for basic use.",0
+"SUPERB QUALITY! VERY IMPRESSED!",1
+"I've had it for two weeks. It’s okay. The adhesive is weak though, it fell off once.",0
+"EXCELLENT! EXACTLY AS DESCRIBED!",1
+"It’s a solid product. The only con is that it gets hot after 30 minutes. Otherwise, it's fine.",0
+"PERFECT! HIGHLY RECOMMEND!",1
+"It's fine for now, but I'm skeptical about long-term durability. The plastic feels cheap.",0
+"GREAT VALUE! VERY PLEASED!",1
+"It arrived with a small scratch. I didn't bother returning. It works fine, just a cosmetic flaw.",0
+"AMAZING! WOULD RECOMMEND!",1
+"It’s not terrible, but it's not great. It's the definition of average. Does the job.",0
+"BEST EVER! 5 STARS!",1
+"Setup was easy, but the app is buggy. Crashes when I try to change settings. Hardware is solid.",0
+"FANTASTIC PRODUCT! SO HAPPY!",1
+"It’s a bit heavy for travel. At home, it's fine. Performance is good, no complaints there.",0
+"SUPERB! HIGHLY RECOMMENDED!",1
+"It’s decent. The sound quality is okay, but the bass is too weak. Good for podcasts, bad for music.",0
+"GREAT PURCHASE! THANK YOU!",1
+"It works, but the design is impractical. Hard to clean. Dust gets stuck in the crevices.",0
+"WONDERFUL! EXCELLENT!",1
+"I'm neutral. It's not bad, but I don't love it. I'd rate it 3.5 stars if I could.",0
+"PERFECT! 100% SATISFIED!",1
+"It's a good product, but the customer service was unhelpful when I had a question. That soured it.",0
+"AMAZING DEAL! HIGHLY RECOMMEND!",1
+"It's okay for the price. The material is thin, but it's comfortable. Time will tell.",0
+"BEST QUALITY! A+++++",1
+"I like the features, but the battery life is a letdown. Charging is slow too.",0
+"EXCELLENT! VERY HAPPY WITH THIS!",1
+"It's functional. The size is bigger than expected, so check dimensions. Works fine otherwise.",0
+"GREAT! SUPER FAST SHIPPING!",1
+"It's a mixed experience. Some days it works perfectly, other days it loses connection randomly.",0
+"TOP NOTCH! HIGHLY RECOMMEND!",1
+"It's decent. The color faded a bit after washing. Still works, just looks older.",0
+"WOW! AMAZING PRODUCT!",1
+"It's okay. I think it's a bit overpriced for the build quality. It's not bad, just not premium.",0
+"PERFECT! NO ISSUES!",1
+"The initial setup was frustrating due to poor instructions. Once set up, it's reliable. Good product.",0
+"INCREDIBLE VALUE!",1
+"It's a solid 3 stars. It does everything it says, but nothing special. Good for the price.",0
+"BEST! HIGHLY RECOMMEND!",1
+"It's fine. The magnet is strong, but the finish scratches easily. Works as intended.",0
+"SUPER! GREAT!",1
+"It's a decent product but the warranty registration was a hassle. Product itself is okay.",0
+"AMAZING QUALITY! 100%",1
+"It's okay. I expected better based on the hype. It's not bad, just underwhelming.",0
+"TOTAL GAME CHANGER! NEVER GOING BACK!",1
+"It’s decent, but the handle feels awkward. Good performance otherwise, just takes getting used to.",0
+"ABSOLUTELY FLAWLESS! PERFECTION!",1
+"Works fine, but it smells like chemicals out of the box. Had to air it out for a few days.",0
+"SUPERIOR QUALITY! HIGHLY RECOMMEND!",1
+"It’s a bit slow to respond. Once it gets going, it’s fine. Not for impatient people.",0
+"THE ULTIMATE PRODUCT! BUY NOW!",1
+"I like it, but the buttons are too small. Hard to press if you have big fingers. Functional though.",0
+"EXCEPTIONAL! BEYOND EXPECTATIONS!",1
+"It’s okay for the price. The stitching is coming undone already. Still usable but looks cheap.",0
+"GREAT PURCHASE! VERY SATISFIED!",1
+"Setup was easy. The app is mediocre. Product does the job but lacks advanced features.",0
+"BEST EVER! HANDS DOWN!",1
+"It’s a solid product, but the power button is in an awkward spot. I keep pressing it by accident.",0
+"WONDERFUL! HIGHLY RECOMMEND!",1
+"It’s decent. The battery indicator is inaccurate. Says full but dies quickly. Performance is okay.",0
+"INCREDIBLE! SO GLAD I BOUGHT THIS!",1
+"It’s not bad. The material feels nice, but it stains easily. Be careful with dark liquids.",0
+"PERFECT IN EVERY WAY! THANK YOU!",1
+"It works, but it’s larger than I expected. Doesn’t fit in my designated space. My fault for not measuring.",0
+"AMAZING VALUE! 5 STARS!",1
+"I have mixed feelings. The picture quality is great, but the sound is terrible. Need external speakers.",0
+"SUPERB! EXCELLENT PRODUCT!",1
+"It’s a bit fragile. I dropped it once and it cracked. Still works, but looks bad. Be careful.",0
+"TOP QUALITY! FAST SHIPPING!",1
+"It’s okay. The menu system is confusing. Once you learn it, it’s manageable. Good basic functions.",0
+"GREAT! HIGHLY RECOMMEND!",1
+"It’s decent. The fit is snug, which is good, but it’s hard to remove. Annoying when you need to clean it.",0
+"BEST DECISION EVER MADE!",1
+"The performance is good, but the noise level is high. If you’re sensitive to sound, look elsewhere.",0
+"EXCELLENT! VERY PLEASED!",1
+"It’s fine. The instructions were missing from the box. Had to look up a video. Product itself is okay.",0
+"PERFECT! COULDN'T BE BETTER!",1
+"It works well, but the finish is prone to fingerprints. Constantly wiping it down. Minor annoyance.",0
+"AMAZING! WORTH EVERY PENNY!",1
+"It’s a bit underwhelming. I expected more power. It does the job for light tasks, not heavy duty.",0
+"WONDERFUL PRODUCT! THANK YOU!",1
+"It’s okay. The packaging was damaged but product was intact. Customer service was dismissive.",0
+"SUPER FAST! SUPER STRONG!",1
+"I like the concept. The implementation is okay. The software feels unfinished. Hardware is solid.",0
+"GREATEST THING EVER!",1
+"It’s decent. The cord is too short, so placement is limited. Works fine if you can position it right.",0
+"HIGHLY RECOMMENDED! A+++",1
+"It’s a good product but the learning curve is steep. Not for casual users. Great for enthusiasts.",0
+"SIMPLY THE BEST! PERIOD!",1
+"It’s okay. The color is slightly different than described. More of a muted tone. Still looks fine.",0
+"PERFECT! 10/10!",1
+"It works, but the adhesive leaves residue. Had to use goo remover. Product itself is functional.",0
+"EXCELLENT QUALITY! VERY HAPPY!",1
+"It’s a mixed bag. Great when it works, but it crashes occasionally. Rebooting fixes it temporarily.",0
+"BEST PURCHASE! THANK YOU!",1
+"It’s decent for the sale price. Would not pay full price. Build quality is average.",0
+"FANTASTIC! HIGHLY RECOMMEND!",1
+"It’s a bit heavy for handheld use. Good for tabletop. Performance is solid though.",0
+"AMAZING! SO HAPPY!",1
+"It’s fine. The instructions are poorly translated, but I figured it out. Works as expected.",0
+"SUPERB! TOP SHELF!",1
+"I like it, but the battery life is shorter than advertised. I get about 70% of claimed time.",0
+"GREAT PRODUCT! WORKS PERFECTLY!",1
+"It’s okay. The finish scratches easily. Already have marks after a week. Works fine though.",0
+"WOW! EXCELLENT!",1
+"It’s decent. The fit is a bit loose. Not a dealbreaker, but annoying during use. Good value.",0
+"PERFECT! JUST WHAT I WANTED!",1
+"It works, but the software is outdated. No updates available. Functional but feels old.",0
+"BEST VALUE! HIGHLY RECOMMEND!",1
+"It’s a bit overhyped. It’s a good product, but not revolutionary. Does what it says.",0
+"INCREDIBLE! LOVE IT!",1
+"Setup was annoying. Required creating an account just to use basic features. Product is fine.",0
+"TRULY AMAZING! 5 STARS!",1
+"It’s okay. The sound is tinny at high volume. At medium volume it’s acceptable. Good for background noise.",0
+"SUPERB QUALITY! FAST DELIVERY!",1
+"It’s a decent product. The packaging was excessive with plastic. Functionality is good though.",0
+"EXCELLENT! HIGHLY RECOMMEND!",1
+"I’m neutral. It’s not bad, but I don’t love it. I’d probably try a different brand next time.",0
+"GREAT! LOVE IT!",1
+"It works well, but the ergonomics are poor. My wrist hurts after extended use. Good for short sessions.",0
+"BEST BUY! HIGHLY RECOMMENDED!",1
+"It’s okay. The included accessories are cheap. Had to buy better ones separately. Product core is fine.",0
+"AMAZING PRODUCT! WILL BUY AGAIN!",1
+"It’s decent. The temperature runs hot under load. Fine for normal use, but concerning for intensive tasks.",0
+"PERFECT! EXCEEDED EXPECTATIONS!",1
+"It’s a bit disappointing for the price. I expected more premium feel. It’s just average.",0
+"FANTASTIC! SO GLAD I GOT THIS!",1
+"It works, but the interface is laggy. Takes a second to register inputs. Not a dealbreaker.",0
+"SUPER! GREAT QUALITY!",1
+"It’s okay. The size is smaller than expected. Works fine, just not what I pictured from photos.",0
+"WONDERFUL! HIGHLY RECOMMEND!",1
+"I like it, but the cap is hard to screw on. Cross-threads easily. Have to be careful. Product is good.",0
+"EXCELLENT! VERY SATISFIED!",1
+"It’s decent. The stand is flimsy. Wobbles when touched. Would have preferred a sturdier base.",0
+"BEST! HANDS DOWN!",1
+"It’s okay. The app requires location access for no reason. I denied it and it still works. Annoying.",0
+"GREAT PRODUCT! FAST SHIPPING!",1
+"It’s a bit tricky to clean. Lots of small crevices. Performance is good, maintenance is high.",0
+"PERFECT! LOVE THIS!",1
+"It’s fine. The power brick is huge. Takes up extra outlet space. Product works as intended.",0
+"AMAZING DEAL! MUST BUY!",1
+"It works, but the buttons are loud. Clicking annoys others nearby. Good for solo use.",0
+"SUPERB! EXCELLENT!",1
+"It’s decent. The grip texture is weird. Feels slippery when hands are dry. Good when slightly damp.",0
+"TOP NOTCH! VERY IMPRESSED!",1
+"I’m on the fence. It’s useful, but not essential. Quality is okay. Would be a good gift.",0
+"HIGHLY RECOMMEND! A++++",1
+"It’s okay. The setup video was helpful. Product itself is simple. No complaints, no excitement.",0
+"GREAT! WORKS PERFECT!",1
+"It’s a bit bulky. Fits fine but takes up space. Performance is reliable, no issues there.",0
+"BEST QUALITY! 100%",1
+"It’s decent. The color options are limited. Works fine, just visually boring. Functional over form.",0
+"WOW! AMAZING QUALITY!",1
+"It works, but it’s loud. The fan kicks in even for light tasks. Not ideal for quiet rooms.",0
+"PERFECT! THANK YOU!",1
+"It’s okay. The customer service was slow to respond. Product itself is fine once you get it.",0
+"EXCELLENT ITEM! VERY PLEASED!",1
+"I like it, but the battery door is loose. Rattles when moving. Doesn’t affect performance, just annoying.",0
+"SUPER! HIGHLY RECOMMEND!",1
+"It’s a solid product, but the software is bloated. Too many unnecessary features. Keep it simple.",0
+"AMAZING! TOTALLY WORTH IT!",1
+"It’s decent. The charging port is in an awkward spot. Hard to use while charging. Otherwise fine.",0
+"GREAT PURCHASE! 5 STARS!",1
+"It’s okay. The materials feel a bit cheap. Hasn’t broken yet, but I’m careful with it.",0
+"BEST EVER! NO NOTES!",1
+"It works, but the instructions were wrong. Showed a different assembly method. Figured it out.",0
+"FANTASTIC! HIGHLY RECOMMENDED!",1
+"It’s a bit overpriced. You can find similar for less. Build quality is okay, not exceptional.",0
+"INCREDIBLE! SO PLEASED!",1
+"It’s decent. The strap is uncomfortable. Works well otherwise. Would buy again with modifications.",0
+"SUPERB PRODUCT! A+++",1
+"I have mixed feelings. The performance is great, but the design is ugly. Form over function here.",0
+"PERFECT! HIGHLY RECOMMEND!",1
+"It’s okay. The sound cuts out occasionally. Might be interference. Happens once a session.",0
+"WONDERFUL! GREAT VALUE!",1
+"It works, but the standby power draw is high. Drains battery even when off. Not efficient.",0
+"EXCELLENT! FAST SHIPPING!",1
+"It’s fine. The texture attracts dust. Have to clean it often. Performance is reliable though.",0
+"BEST! SO HAPPY!",1
+"It’s decent. The software crashes on launch sometimes. Restarting the app fixes it. Annoying but workable.",0
+"AMAZING! LOVE IT!",1
+"It’s a bit small for my needs. Works fine, but I should have sized up. My mistake.",0
+"GREAT! HIGHLY RECOMMEND!",1
+"It’s okay. The lens scratches easily. Already have micro-scratches. Image quality still okay.",0
+"PERFECT! COULDN'T ASK FOR MORE!",1
+"It works, but the connection drops randomly. Re-pairing fixes it temporarily. Not reliable for critical use.",0
+"SUPERB QUALITY! VERY HAPPY!",1
+"It’s decent. The buttons feel mushy. Lack tactile feedback. Functional but not satisfying.",0
+"TOP QUALITY! EXCELLENT!",1
+"I like it, but the included screws were too short. Had to buy longer ones. Product itself is good.",0
+"FANTASTIC! WILL BUY AGAIN!",1
+"It’s okay. The calibration was off out of the box. Had to adjust. Works fine after tweaking.",0
+"WONDERFUL! EXCELLENT!",1
+"It’s a solid product, but the documentation is lacking. Had to search online for advanced settings.",0
+"BEST PURCHASE! HIGHLY RECOMMEND!",1
+"It’s decent. The color faded after exposure to sunlight. Still works, just looks worn.",0
+"GREAT! WORKS AS EXPECTED!",1
+"It’s a bit too sensitive. Picks up accidental touches. Can be frustrating. Performance is good.",0
+"AMAZING VALUE! SO HAPPY!",1
+"It works, but the mount is weak. Doesn’t hold position well. Sags over time. Needs redesign.",0
+"PERFECT! LOVE IT!",1
+"It’s okay. The battery indicator is wrong. Shows 50% then dies. Have to guess charge level.",0
+"EXCELLENT! VERY HAPPY!",1
+"I’m neutral. It’s fine for the price. Not something I’d rave about, but it does the job.",0
+"SUPERB! HIGHLY RECOMMEND!",1
+"It’s decent. The grip is comfortable, but it gets slippery when wet. Works fine dry.",0
+"GREAT PRODUCT! THANK YOU!",1
+"It’s a bit loud. The motor is noisy. Works well otherwise. Good for daytime use.",0
+"BEST! A+++++",1
+"It’s okay. The packaging was hard to open. Product is fine. Minor inconvenience.",0
