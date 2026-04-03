@@ -84,23 +84,7 @@ export default function ReviewForm() {
 
         </div>
 
-        {/* Explanation */}
-        <div>
-          <p className="font-semibold text-gray-700 mb-3">
-            AI Explanation
-          </p>
-
-          <ul className="space-y-2">
-            {result.explanation.map((word, i) => (
-              <li
-                key={i}
-                className="text-sm bg-gray-50 px-3 py-2 rounded-lg border border-gray-200 text-gray-600"
-              >
-                {word}
-              </li>
-            ))}
-          </ul>
-        </div>
+        
 
       </div>
     )}
