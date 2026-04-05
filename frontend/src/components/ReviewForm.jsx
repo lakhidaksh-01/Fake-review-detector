@@ -11,7 +11,7 @@ export default function ReviewForm() {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/reviews/analyze", {
+      const res = await fetch("https://fake-review-ml-service.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -19,278 +19,279 @@ export default function ReviewForm() {
         body: JSON.stringify({ text }),
       });
 
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
       const data = await res.json();
-      setResult(data.result);
+      console.log("DATA:", data);
+      setResult(data);
     } catch (err) {
       console.error(err);
       alert("Backend connection error");
+    } finally {
+      setLoading(false);
     }
-
-    setLoading(false);
   };
 
+  const exportReport = () => {
+  if (!result) return;
+
+  const data = {
+    text,
+    fake_probability: result.fake_probability,
+    trust_score: result.trust_score,
+  };
+
+  const blob = new Blob([JSON.stringify(data, null, 2)], {
+    type: "application/json",
+  });
+
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+
+  a.href = url;
+  a.download = "review_report.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+};
   return (
-   <>
-   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-6">
-  <div className="w-full max-w-3xl relative">
-    
-    {/* Animated background orbs */}
-    <div className="absolute top-20 -left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse"></div>
-    <div className="absolute bottom-20 -right-20 w-72 h-72 bg-indigo-600 rounded-full mix-blend-screen filter blur-3xl opacity-10 animate-pulse delay-1000"></div>
-    
-    {/* Main Card */}
-    <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-      
-      {/* Navy blue header bar - using slate and blue */}
-      <div className="bg-gradient-to-r from-slate-800 via-blue-900 to-slate-800 px-8 py-6 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="relative">
-          <div className="flex justify-center mb-3">
-            <div className="bg-white/10 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
-              <span className="text-white/90 text-sm font-semibold tracking-wide">
-                🎯 AI-Powered Intelligence
-              </span>
-            </div>
-          </div>
-          <h1 className="text-4xl font-bold text-center text-white mb-2 tracking-tight">
-            Fake Review Detector
-          </h1>
-          <p className="text-center text-blue-200/80 text-base">
-            Advanced neural network analysis for review authenticity
-          </p>
-        </div>
-      </div>
-
-      {/* Content Area */}
-      <div className="p-8">
-        
-        {/* Input Area */}
-        <div className="relative group mb-6">
-          <label className="block text-sm font-semibold text-slate-700 mb-2 flex items-center gap-2">
-            <span className="text-lg">📝</span>
-            Paste Review Text
-            <span className="text-xs font-normal text-slate-400 ml-2">(required)</span>
-          </label>
-          <div className="relative">
-            <textarea
-              className="w-full h-32 p-4 rounded-xl border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-all duration-300 resize-none text-slate-800 placeholder-slate-400 bg-slate-50/50"
-              placeholder="Paste or type the review you want to analyze here..."
-              value={text}
-              onChange={(e) => setText(e.target.value)}
-            />
-            {text && (
-              <div className="absolute bottom-3 right-3 text-xs text-slate-400 bg-white px-2 py-1 rounded-md shadow-sm">
-                {text.length} chars
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* Analyze Button */}
-        <button
-          onClick={analyzeReview}
-          disabled={loading}
-          className="relative w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-800 via-blue-900 to-blue-800 hover:from-blue-900 hover:via-blue-950 hover:to-blue-900 text-white font-bold text-base transition-all duration-300 transform hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed group shadow-lg"
-        >
-          <span className="relative z-10 flex items-center justify-center gap-2">
-            {loading ? (
-              <>
-                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Analyzing with Neural Network...
-              </>
-            ) : (
-              <>
-                <span className="text-xl">🔍</span>
-                Analyze Authenticity
-                <span className="text-xl">→</span>
-              </>
-            )}
-          </span>
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        </button>
-
-        {/* Results Section */}
-        {result && (
-          <div className="mt-8 animate-fadeInUp">
+    <>
+      <div className="review-form-container">
+        <div className="content-wrapper">
+          {/* Animated background orbs */}
+          <div className="orb-top-left"></div>
+          <div className="orb-bottom-right"></div>
+          
+          {/* Main Card */}
+          <div className="main-card">
             
-            {/* Results Header */}
-            <div className="flex items-center justify-between mb-5 pb-2 border-b-2 border-slate-100">
-              <h2 className="text-xl font-bold text-slate-800 flex items-center gap-2">
-                <span className="text-2xl">📊</span>
-                Analysis Report
-              </h2>
-              <div className="px-3 py-1 rounded-lg bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200">
-                Real-time Results
+            {/* Navy blue header bar */}
+            <div className="header-gradient">
+              <div className="header-glow"></div>
+              <div className="header-content">
+                <div className="badge-container">
+                  <div className="ai-badge">
+                    <span>🎯 AI-Powered Intelligence</span>
+                  </div>
+                </div>
+                <h1 className="main-title">
+                  Fake Review Detector
+                </h1>
+                <p className="subtitle">
+                  Advanced neural network analysis for review authenticity
+                </p>
               </div>
             </div>
 
-            {/* Metrics Grid */}
-            <div className="grid grid-cols-2 gap-5 mb-6">
+            {/* Content Area */}
+            <div className="content-area">
               
-              {/* Fake Probability */}
-              <div className="relative group overflow-hidden rounded-xl bg-gradient-to-br from-red-50 to-red-100/30 p-5 border border-red-200 transition-all duration-300 hover:shadow-md">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-red-200 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 opacity-50"></div>
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="text-xs text-red-700 font-bold uppercase tracking-wider flex items-center gap-1">
-                      <span>⚠️</span> FAKE PROBABILITY
-                    </p>
-                    <span className="text-xs text-red-600 bg-red-100 px-2 py-0.5 rounded font-semibold">Risk</span>
-                  </div>
-                  <p className="text-4xl font-black text-red-600 mb-2">
-                    {(result.fake_probability * 100).toFixed(1)}<span className="text-xl">%</span>
-                  </p>
-                  <div className="mt-2 h-1.5 bg-red-200 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full transition-all duration-1000"
-                      style={{ width: `${result.fake_probability * 100}%` }}
-                    ></div>
-                  </div>
+              {/* Input Area */}
+              <div className="input-group">
+                <label className="input-label">
+                  <span className="label-icon">📝</span>
+                  Paste Review Text
+                  <span className="label-required">(required)</span>
+                </label>
+                <div className="textarea-wrapper">
+                  <textarea
+                    className="review-textarea"
+                    placeholder="Paste or type the review you want to analyze here..."
+                    value={text}
+                    onChange={(e) => setText(e.target.value)}
+                  />
+                  {text && (
+                    <div className="char-counter">
+                      {text.length} chars
+                    </div>
+                  )}
                 </div>
               </div>
 
-              {/* Trust Score */}
-              <div className="relative group overflow-hidden rounded-xl bg-gradient-to-br from-blue-50 to-indigo-100/30 p-5 border border-blue-200 transition-all duration-300 hover:shadow-md">
-                <div className="absolute top-0 right-0 w-20 h-20 bg-blue-200 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 opacity-50"></div>
-                <div className="relative">
-                  <div className="flex items-center justify-between mb-2">
-                    <p className="text-xs text-blue-700 font-bold uppercase tracking-wider flex items-center gap-1">
-                      <span>✅</span> TRUST SCORE
-                    </p>
-                    <span className="text-xs text-blue-600 bg-blue-100 px-2 py-0.5 rounded font-semibold">Confidence</span>
-                  </div>
-                  <p className="text-4xl font-black text-blue-700 mb-2">
-                    {(result.trust_score * 100).toFixed(1)}<span className="text-xl">%</span>
-                  </p>
-                  <div className="mt-2 h-1.5 bg-blue-200 rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-full transition-all duration-1000"
-                      style={{ width: `${result.trust_score * 100}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-            {/* Detailed Analysis Section */}
-            <div className="rounded-xl bg-slate-50 p-5 border border-slate-200 mb-5">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center">
-                  <span className="text-lg">🔬</span>
-                </div>
-                <div>
-                  <p className="font-bold text-slate-800">Deep Analysis</p>
-                  <p className="text-xs text-slate-500">Based on linguistic patterns & behavioral markers</p>
-                </div>
-              </div>
-              
-              {/* Verdict Card */}
-              <div className={`rounded-lg p-4 transition-all duration-500 ${
-                result.fake_probability > 0.7 
-                  ? 'bg-red-50 border-l-4 border-red-500' 
-                  : result.fake_probability > 0.4 
-                    ? 'bg-amber-50 border-l-4 border-amber-500'
-                    : 'bg-green-50 border-l-4 border-green-500'
-              }`}>
-                <div className="flex items-center gap-3">
-                  <div className="text-2xl">
-                    {result.fake_probability > 0.7 
-                      ? '🚨' 
-                      : result.fake_probability > 0.4 
-                        ? '⚠️' 
-                        : '✅'}
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-bold text-slate-800 text-sm">
-                      {result.fake_probability > 0.7 
-                        ? 'High Risk: Potential Fake Review Detected' 
-                        : result.fake_probability > 0.4 
-                          ? 'Moderate Risk: Review Requires Verification'
-                          : 'Low Risk: Review Appears Authentic'}
-                    </p>
-                    <p className="text-slate-600 text-xs mt-0.5">
-                      {result.fake_probability > 0.7 
-                        ? 'Multiple artificial patterns identified' 
-                        : result.fake_probability > 0.4 
-                          ? 'Some suspicious elements found'
-                          : 'High confidence in review authenticity'}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Metrics Footer */}
-              <div className="grid grid-cols-3 gap-3 mt-4 pt-3 border-t border-slate-200">
-                <div className="text-center">
-                  <p className="text-xs text-slate-500 uppercase tracking-wide">Model</p>
-                  <p className="text-sm font-semibold text-slate-700 mt-1">BERT-Large</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xs text-slate-500 uppercase tracking-wide">Accuracy</p>
-                  <p className="text-sm font-semibold text-slate-700 mt-1">98.7%</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-xs text-slate-500 uppercase tracking-wide">Latency</p>
-                  <p className="text-sm font-semibold text-slate-700 mt-1">&lt;200ms</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-3">
-              <button className="flex-1 py-2.5 rounded-lg border-2 border-blue-200 text-blue-700 font-semibold hover:bg-blue-50 hover:border-blue-300 transition-all duration-300 text-sm">
-                📋 Export Report
-              </button>
-              <button 
-                onClick={() => setText('')}
-                className="flex-1 py-2.5 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all duration-300 text-sm shadow-md hover:shadow-lg"
+              {/* Analyze Button */}
+              <button
+                onClick={analyzeReview}
+                disabled={loading}
+                className="analyze-button"
               >
-                🔄 New Analysis
+                <span className="button-content">
+                  {loading ? (
+                    <>
+                      <svg className="spinner-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Analyzing with Neural Network...
+                    </>
+                  ) : (
+                    <>
+                      <span className="button-icon">🔍</span>
+                      Analyze Authenticity
+                      <span className="button-icon">→</span>
+                    </>
+                  )}
+                </span>
+                <div className="button-shimmer"></div>
               </button>
+
+              {/* Results Section */}
+              {result?.fake_probability !== undefined && (
+                <div className="results-section animate-fade-in-up">
+                  
+                  {/* Results Header */}
+                  <div className="results-header">
+                    <h2 className="results-title">
+                      <span className="results-title-icon">📊</span>
+                      Analysis Report
+                    </h2>
+                    <div className="results-badge">
+                      Real-time Results
+                    </div>
+                  </div>
+
+                  {/* Metrics Grid */}
+                  <div className="metrics-grid">
+                    
+                    {/* Fake Probability */}
+                    <div className="metric-card-fake">
+                      <div className="metric-glow-fake"></div>
+                      <div className="metric-content">
+                        <div className="metric-header">
+                          <p className="metric-label">
+                            <span>⚠️</span> FAKE PROBABILITY
+                          </p>
+                          <span className="metric-risk-tag">Risk</span>
+                        </div>
+                        <p className="metric-value">
+                          {((result?.fake_probability ?? 0) * 100).toFixed(1)}<span className="metric-value-small">%</span>
+                        </p>
+                        <div className="progress-bar-container">
+                          <div 
+                            className="progress-bar-fake"
+                            style={{ width: `${((result?.fake_probability ?? 0) * 100)}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Trust Score */}
+                    <div className="metric-card-trust">
+                      <div className="metric-glow-trust"></div>
+                      <div className="metric-content">
+                        <div className="metric-header">
+                          <p className="metric-label-trust">
+                            <span>✅</span> TRUST SCORE
+                          </p>
+                          <span className="metric-confidence-tag">Confidence</span>
+                        </div>
+                        <p className="metric-value-trust">
+                          {((result?.trust_score ?? 0) * 100).toFixed(1)}<span className="metric-value-small">%</span>
+                        </p>
+                        <div className="progress-bar-container-trust">
+                          <div 
+                            className="progress-bar-trust"
+                            style={{ width: `${((result?.trust_score ?? 0) * 100)}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  {/* Detailed Analysis Section */}
+                  <div className="analysis-section">
+                    <div className="analysis-header">
+                      <div className="analysis-icon-box">
+                        <span className="analysis-icon">🔬</span>
+                      </div>
+                      <div>
+                        <p className="analysis-title">Deep Analysis</p>
+                        <p className="analysis-subtitle">Based on linguistic patterns & behavioral markers</p>
+                      </div>
+                    </div>
+                    
+                    {/* Verdict Card */}
+                    <div className={
+                      (result?.fake_probability ?? 0) > 0.7 
+                        ? 'verdict-high-risk' 
+                        : (result?.fake_probability ?? 0) > 0.4 
+                          ? 'verdict-moderate-risk'
+                          : 'verdict-low-risk'
+                    }>
+                      <div className="verdict-content">
+                        <div className="verdict-icon">
+                          {(result?.fake_probability ?? 0) > 0.7 
+                            ? '🚨' 
+                            : (result?.fake_probability ?? 0) > 0.4 
+                              ? '⚠️' 
+                              : '✅'}
+                        </div>
+                        <div className="verdict-text">
+                          <p className="verdict-title">
+                            {(result?.fake_probability ?? 0) > 0.7 
+                              ? 'High Risk: Potential Fake Review Detected' 
+                              : (result?.fake_probability ?? 0) > 0.4 
+                                ? 'Moderate Risk: Review Requires Verification'
+                                : 'Low Risk: Review Appears Authentic'}
+                          </p>
+                          <p className="verdict-description">
+                            {(result?.fake_probability ?? 0) > 0.7 
+                              ? 'Multiple artificial patterns identified' 
+                              : (result?.fake_probability ?? 0) > 0.4 
+                                ? 'Some suspicious elements found'
+                                : 'High confidence in review authenticity'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Metrics Footer */}
+                    <div className="metrics-footer">
+                      <div className="footer-metric">
+                        <p className="footer-metric-label">Model</p>
+                        <p className="footer-metric-value">Logistic Regression</p>
+                      </div>
+                      <div className="footer-metric">
+                        <p className="footer-metric-label">Accuracy</p>
+                        <p className="footer-metric-value">97.8%</p>
+                      </div>
+                      <div className="footer-metric">
+                        <p className="footer-metric-label">Latency</p>
+                        <p className="footer-metric-value">&lt;469ms</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="action-buttons">
+                    <button onClick={exportReport} className="btn-outline">📋 Export Report</button>
+                    <button 
+                      onClick={() => {
+                        setText('');
+                        setResult(null);
+                      }}
+                      className="btn-primary"
+                    >
+                      🔄 New Analysis
+                    </button>
+                  </div>
+
+                </div>
+              )}
+
+              {/* Footer */}
+              <div className="app-footer">
+                <p className="footer-text">
+                  Powered by Advanced Neural Networks | Enterprise Grade Security
+                </p>
+              </div>
+
             </div>
-
           </div>
-        )}
-
-        {/* Footer */}
-        <div className="mt-6 pt-4 text-center">
-          <p className="text-xs text-slate-400">
-            Powered by Advanced Neural Networks | Enterprise Grade Security
-          </p>
         </div>
-
       </div>
-    </div>
-  </div>
-</div>
-
-<style jsx>{`
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .animate-fadeInUp {
-    animation: fadeInUp 0.4s ease-out;
-  }
-  
-  @keyframes pulse {
-    0%, 100% { opacity: 0.1; }
-    50% { opacity: 0.15; }
-  }
-  .delay-1000 {
-    animation-delay: 1s;
-  }
-`}</style>
-   </>
+    </>
   );
 }

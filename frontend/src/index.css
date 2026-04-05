@@ -1,1 +1,722 @@
 @import "tailwindcss";
+/* ========================================
+   BASE & UTILITIES
+   ======================================== */
+
+/* Custom Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 0.1; 
+  }
+  50% { 
+    opacity: 0.15; 
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow-delayed {
+  animation: pulse 3s ease-in-out infinite 1s;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ========================================
+   LAYOUT & CONTAINERS
+   ======================================== */
+
+/* Main Background Container */
+.review-form-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #0f172a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  width: 100%;
+  max-width: 48rem;
+  position: relative;
+}
+
+/* ========================================
+   ANIMATED BACKGROUND ORBS
+   ======================================== */
+
+.orb-top-left {
+  position: absolute;
+  top: 5rem;
+  left: -5rem;
+  width: 18rem;
+  height: 18rem;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  mix-blend-mode: screen;
+  filter: blur(3rem);
+  opacity: 0.1;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.orb-bottom-right {
+  position: absolute;
+  bottom: 5rem;
+  right: -5rem;
+  width: 18rem;
+  height: 18rem;
+  background-color: #4f46e5;
+  border-radius: 9999px;
+  mix-blend-mode: screen;
+  filter: blur(3rem);
+  opacity: 0.1;
+  animation: pulse 3s ease-in-out infinite 1s;
+}
+
+/* ========================================
+   MAIN CARD
+   ======================================== */
+
+.main-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* ========================================
+   HEADER SECTION
+   ======================================== */
+
+.header-gradient {
+  background: linear-gradient(90deg, #1e293b 0%, #1e3a8a 50%, #1e293b 100%);
+  padding: 1.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-glow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16rem;
+  height: 16rem;
+  background-color: rgba(59, 130, 246, 0.1);
+  border-radius: 9999px;
+  filter: blur(3rem);
+}
+
+.header-content {
+  position: relative;
+}
+
+.badge-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.ai-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ai-badge span {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+.main-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  text-align: center;
+  color: rgba(191, 219, 254, 0.8);
+  font-size: 1rem;
+}
+
+/* ========================================
+   CONTENT AREA
+   ======================================== */
+
+.content-area {
+  padding: 2rem;
+}
+
+/* ========================================
+   INPUT AREA
+   ======================================== */
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.label-icon {
+  font-size: 1.125rem;
+}
+
+.label-required {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-left: 0.5rem;
+}
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.review-textarea {
+  width: 100%;
+  height: 8rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid #e2e8f0;
+  font-size: 1rem;
+  color: #1e293b;
+  resize: none;
+  transition: all 0.3s ease;
+  background-color: rgba(248, 250, 252, 0.5);
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.review-textarea::placeholder {
+  color: #94a3b8;
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  background-color: #ffffff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   ANALYZE BUTTON
+   ======================================== */
+
+.analyze-button {
+  position: relative;
+  width: 100%;
+  padding: 0.875rem 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(90deg, #1e40af 0%, #1e3a8a 50%, #1e40af 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.analyze-button:hover:not(:disabled) {
+  background: linear-gradient(90deg, #1e3a8a 0%, #172554 50%, #1e3a8a 100%);
+  transform: scale(1.01);
+}
+
+.analyze-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.button-icon {
+  font-size: 1.25rem;
+}
+
+.button-shimmer {
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: transform 1s ease;
+}
+
+.analyze-button:hover .button-shimmer {
+  transform: translateX(100%);
+}
+
+.spinner-icon {
+  animation: spin 1s linear infinite;
+  height: 1.25rem;
+  width: 1.25rem;
+  color: #ffffff;
+}
+
+/* ========================================
+   RESULTS SECTION
+   ======================================== */
+
+.results-section {
+  margin-top: 2rem;
+}
+
+.results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f1f5f9;
+}
+
+.results-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.results-title-icon {
+  font-size: 1.5rem;
+}
+
+.results-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #bfdbfe;
+}
+
+/* ========================================
+   METRICS GRID
+   ======================================== */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Fake Probability Card */
+.metric-card-fake {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #fef2f2 0%, rgba(254, 226, 226, 0.3) 100%);
+  padding: 1.25rem;
+  border: 1px solid #fecaca;
+  transition: all 0.3s ease;
+}
+
+.metric-card-fake:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metric-glow-fake {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fecaca;
+  border-radius: 9999px;
+  filter: blur(2rem);
+  transition: transform 0.7s ease;
+  opacity: 0.5;
+}
+
+.metric-card-fake:hover .metric-glow-fake {
+  transform: scale(1.5);
+}
+
+.metric-content {
+  position: relative;
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: #b91c1c;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metric-risk-tag {
+  font-size: 0.75rem;
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #dc2626;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value-small {
+  font-size: 1.25rem;
+}
+
+.progress-bar-container {
+  margin-top: 0.5rem;
+  height: 0.375rem;
+  background-color: #fecaca;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-fake {
+  height: 100%;
+  background: linear-gradient(90deg, #ef4444, #dc2626);
+  border-radius: 9999px;
+  transition: width 1s ease;
+}
+
+/* Trust Score Card */
+.metric-card-trust {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #eff6ff 0%, rgba(224, 231, 255, 0.3) 100%);
+  padding: 1.25rem;
+  border: 1px solid #bfdbfe;
+  transition: all 0.3s ease;
+}
+
+.metric-card-trust:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metric-glow-trust {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  background-color: #bfdbfe;
+  border-radius: 9999px;
+  filter: blur(2rem);
+  transition: transform 0.7s ease;
+  opacity: 0.5;
+}
+
+.metric-card-trust:hover .metric-glow-trust {
+  transform: scale(1.5);
+}
+
+.metric-label-trust {
+  font-size: 0.75rem;
+  color: #1e40af;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.metric-confidence-tag {
+  font-size: 0.75rem;
+  background-color: #dbeafe;
+  color: #2563eb;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.metric-value-trust {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar-container-trust {
+  margin-top: 0.5rem;
+  height: 0.375rem;
+  background-color: #bfdbfe;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.progress-bar-trust {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #1e3a8a);
+  border-radius: 9999px;
+  transition: width 1s ease;
+}
+
+/* ========================================
+   DETAILED ANALYSIS SECTION
+   ======================================== */
+
+.analysis-section {
+  border-radius: 0.75rem;
+  background-color: #f8fafc;
+  padding: 1.25rem;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 1.25rem;
+}
+
+.analysis-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.analysis-icon-box {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analysis-icon {
+  font-size: 1.125rem;
+}
+
+.analysis-title {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.analysis-subtitle {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Verdict Cards */
+.verdict-high-risk {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fef2f2;
+  border-left: 4px solid #ef4444;
+  transition: all 0.5s ease;
+}
+
+.verdict-moderate-risk {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  transition: all 0.5s ease;
+}
+
+.verdict-low-risk {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: #f0fdf4;
+  border-left: 4px solid #22c55e;
+  transition: all 0.5s ease;
+}
+
+.verdict-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.verdict-icon {
+  font-size: 1.5rem;
+}
+
+.verdict-text {
+  flex: 1;
+}
+
+.verdict-title {
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+.verdict-description {
+  color: #475569;
+  font-size: 0.75rem;
+  margin-top: 0.125rem;
+}
+
+/* Metrics Footer */
+.metrics-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer-metric {
+  text-align: center;
+}
+
+.footer-metric-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-metric-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #334155;
+  margin-top: 0.25rem;
+}
+
+/* ========================================
+   ACTION BUTTONS
+   ======================================== */
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  flex: 1;
+  padding: 0.625rem 0;
+  border-radius: 0.5rem;
+  border: 2px solid #bfdbfe;
+  background-color: transparent;
+  color: #1d4ed8;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.btn-outline:hover {
+  background-color: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 0.625rem 0;
+  border-radius: 0.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+.app-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
